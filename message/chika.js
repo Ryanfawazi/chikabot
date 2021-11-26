@@ -22,7 +22,7 @@ module.exports = async(chika, msg, m, ind, setting) => {
         let { ownerNumber, botName } = setting
         const time = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('DD/MM/YY HH:mm:ss z')
         const salam = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('a')
-        const fromMe = msg.key.fromMe
+        const fromMe = !msg.key.fromMe
 	const from = msg.key.remoteJid
 	const type = Object.keys(msg.message)[0]
         const content = JSON.stringify(msg.message)
